@@ -9,7 +9,7 @@ class UserClass extends React.Component {
         avatar_url: "https://degaulturl.jpg",
       },
     };
-    console.log("Consturctor Called");
+    // console.log("Consturctor Called");
   }
 
   async componentDidMount() {
@@ -19,19 +19,19 @@ class UserClass extends React.Component {
     this.setState({
       userInfo: json,
     });
-    console.log("Component did mount ");
+    // console.log("Component did mount ");
   }
 
   componentDidUpdate() {
-    console.log("Component Did Update ");
+    // console.log("Component Did Update ");
   }
 
   componentWillUnmount() {
-    console.log("Component will Unmount ");
+    // console.log("Component will Unmount ");
   }
 
   render() {
-    console.log("Render Called");
+    // console.log("Render Called");
     const { name, location, avatar_url } = this.state.userInfo;
     return (
       <div className="user-card">

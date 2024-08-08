@@ -1,22 +1,31 @@
 const Shimmer = () => {
   return (
-    <div className="shimmer-container">
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
+    <div className="flex flex-wrap">
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
+      <div className="w-48 h-80 bg-gray-200 m-7"></div>
     </div>
   );
 };

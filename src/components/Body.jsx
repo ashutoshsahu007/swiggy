@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestauratn, setListOfRestaurant] = useState([]);
@@ -32,8 +33,9 @@ const Body = () => {
       <div className="filter flex items-center">
         <div className="search m-2 p-4">
           <input
-            className="border border-solid border-black rounded-lg "
+            className="border border-solid border-black rounded-md "
             type="text"
+            placeholder="Search Your Reastaurant"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -67,7 +69,12 @@ const Body = () => {
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link
+            key={restaurant.info.id}
+            to={"/city/bangalore/" + restaurant.info.id}
+          >
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
