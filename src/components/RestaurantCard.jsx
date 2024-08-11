@@ -1,7 +1,9 @@
 import { CDN_URL } from "../utils/constants";
+
 const RestaurantCard = (props) => {
   const { resData } = props;
   const { name, cuisines, avgRatingString, costForTwo } = resData?.info;
+
   return (
     <div
       className="m-4 p-4 w-[219px] rounded-lg bg-gray-100 hover:bg-gray-300
@@ -19,6 +21,24 @@ const RestaurantCard = (props) => {
       <h4>{costForTwo}</h4>
     </div>
   );
+};
+
+// Higher Order Component
+
+// input - RestaurantCard ==> RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <>
+        <label className="absolute text-black bg-green-300 m-2 p-2 rounded-lg">
+          IsOpen
+        </label>
+
+        <RestaurantCard {...props} />
+      </>
+    );
+  };
 };
 
 export default RestaurantCard;

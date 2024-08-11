@@ -14,7 +14,6 @@ import RestaurantMenu from "./components/RestaurantMenu";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
-  console.log(<Body />);
   return (
     <div className="app">
       <Header />
