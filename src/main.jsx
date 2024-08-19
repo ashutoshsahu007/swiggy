@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "../index.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import Bottom from "./components/Bottom";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,6 +14,9 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -26,19 +28,20 @@ const AppLayout = () => {
   useEffect(() => {
     // Make an API call and send username and password
     const data = {
-      name: "Ashutosh sahu ",
+      name: "Ashutosh sahu",
     };
     setUsername(data.name);
   }, []);
 
   return (
-    <UserContext.Provider value={{ loggedInUser: userName, setUsername }}>
-      <div className="app">
-        <Header />
-        <Outlet />
-        <Bottom />
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUsername }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -70,6 +73,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/city/bangalore/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,

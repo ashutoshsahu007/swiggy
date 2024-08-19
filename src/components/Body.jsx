@@ -10,8 +10,6 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  console.log(listOfRestauratn);
-
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
