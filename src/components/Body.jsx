@@ -4,6 +4,7 @@ import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import Footer from "./Footer";
 
 const Body = () => {
   const [listOfRestauratn, setListOfRestaurant] = useState([]);
@@ -48,7 +49,7 @@ const Body = () => {
       <div className="filter flex items-center">
         <div className="search m-2 p-4">
           <input
-            className="border border-solid border-black rounded-md "
+            className="border border-solid border-black rounded-md px-2 py-1 "
             type="text"
             placeholder="Search Your Reastaurant"
             value={searchText}
@@ -84,7 +85,7 @@ const Body = () => {
         <div className="m-10">
           <label>UserName : </label>
           <input
-            className="border border-black rounded-md"
+            className="border border-black rounded-md px-2"
             type="text"
             value={loggedInUser}
             onChange={(e) => setUsername(e.target.value)}
@@ -105,6 +106,7 @@ const Body = () => {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

@@ -9,14 +9,14 @@ class About extends Component {
 
   render() {
     return (
-      <>
+      <div className="flex">
         <h1>About Class Component </h1>
         <UserContext.Consumer>
           {({ loggedInUser }) => <h1>UserName : {loggedInUser}</h1>}
         </UserContext.Consumer>
         <h2>This is Namaste React Web Series</h2>
         <UserClass />
-      </>
+      </div>
     );
   }
 }
