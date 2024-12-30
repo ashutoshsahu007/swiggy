@@ -7,6 +7,8 @@ import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
+  //our custom hook , fetching the data is abstracted now
+
   const resInfo = useRestaurantMenu(resId);
 
   const [showIndex, setShowIndex] = useState(null);

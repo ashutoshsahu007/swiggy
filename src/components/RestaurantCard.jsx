@@ -28,14 +28,13 @@ const RestaurantCard = (props) => {
 
 // input - RestaurantCard ==> RestaurantCardPromoted
 
-export const withPromotedLabel = (RestaurantCard) => {
+export const withPromotedLabel = () => {
   return (props) => {
     return (
       <>
         <label className="absolute text-black bg-green-300 m-2 p-2 rounded-lg">
           IsOpen
         </label>
-
         <RestaurantCard {...props} />
       </>
     );
