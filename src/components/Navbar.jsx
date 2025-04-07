@@ -1,0 +1,62 @@
+import React, { useContext } from "react";
+import UserContext from "../utils/UserContext";
+
+const Navbar = ({
+  searchText,
+  setSearchText,
+  listOfRestauratn,
+  setFilteredRestaurant,
+}) => {
+  const { loggedInUser, setUsername } = useContext(UserContext);
+
+  return (
+    <div className="filter flex flex-col p-2 md:p-0 items-center border-2 border-fuchsia-500 md:flex-row">
+      <div className="search m-2 p-4 flex items-center flex-col md:flex-row ">
+        <input
+          className="border border-solid border-black rounded-md px-2 py-1 w-[250px]"
+          type="text"
+          placeholder="Search Your Restaurant Here"
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+        />
+        <button
+          className="px-4 py-1 bg-green-300 m-2 rounded-lg"
+          onClick={() => {
+            const filteredRestaurant = listOfRestauratn.filter((res) =>
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setFilteredRestaurant(filteredRestaurant);
+          }}
+        >
+          Search
+        </button>
+      </div>
+      <div>
+        <button
+          className="px-4 py-1 bg-green-300 rounded-lg"
+          onClick={() => {
+            let filteredRes = listOfRestauratn.filter(
+              (res) => res.info.avgRating > 4.3
+            );
+            setFilteredRestaurant(filteredRes);
+          }}
+        >
+          Top Rated Restaurant
+        </button>
+      </div>
+      <div className="m-10 hidden lg:block">
+        <label>UserName : </label>
+        <input
+          className="border border-black rounded-md px-2"
+          type="text"
+          value={loggedInUser}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
