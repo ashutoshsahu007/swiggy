@@ -21,30 +21,32 @@ const Header = () => {
       <img className="w-20 p-1 rounded-sm" src={LOGO_URL} />
       <div className="flex items-center">
         <ul className="flex gap-5 font-semibold items-center">
-          <li>Online Status : {onlineStatus ? "✅" : "🔴"}</li>
-          <li>
+          <li className=" hidden md:flex">
+            Online Status : {onlineStatus ? "✅" : "🔴"}
+          </li>
+          <li className=" hidden md:flex">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className=" hidden lg:flex">
             <Link to="/about">About us</Link>
           </li>
-          <li>
-            <Link to="/contact">Contact us</Link>
-          </li>
-          <li className="font-bold text-xl">
+          <li className="font-bold text-xl ">
             <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
           </li>
-          <li>
+          {/* <li className=" hidden lg:flex">
             <Link to="/grocery">Grocery</Link>
-          </li>
-          <button
+          </li> */}
+          {/* <button
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
+            className=" hidden lg:flex"
           >
             {btnName}
-          </button>
-          <li className="font-bold text-xl">{data.loggedInUser}</li>
+          </button> */}
+          <li className="font-bold text-xl hidden lg:flex">
+            {data.loggedInUser}
+          </li>
         </ul>
       </div>
     </div>
