@@ -9,7 +9,7 @@ class About extends Component {
 
   render() {
     return (
-      <div className="flex">
+      <div className="flex flex-col items-center justify-center gap-4">
         <h1>About Class Component </h1>
         <UserContext.Consumer>
           {({ loggedInUser }) => <h1>UserName : {loggedInUser}</h1>}

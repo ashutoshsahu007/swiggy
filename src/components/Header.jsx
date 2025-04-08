@@ -28,6 +28,9 @@ const Header = () => {
           <li className=" hidden lg:flex">
             <Link to="/about">About us</Link>
           </li>
+          <li className="hidden lg:flex">
+            <Link to="/grocery">Grocery</Link>
+          </li>
           <li className="font-bold text-xl ">
             <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
           </li>
