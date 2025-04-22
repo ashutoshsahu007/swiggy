@@ -18,8 +18,6 @@ const Grocery = lazy(() => import("./components/Grocery"));
 const AppLayout = () => {
   const [userName, setUsername] = useState();
 
-  // authentication
-
   useEffect(() => {
     // Make an API call and send username and password
     const data = {
