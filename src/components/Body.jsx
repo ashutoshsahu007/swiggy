@@ -21,9 +21,10 @@ const Body = () => {
     //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     // );
 
-    const data = await fetch("http://localhost:3001/api/swiggy");
-    const json = await data.json();
+    // const data = await fetch("http://localhost:3001/api/swiggy");
 
+    const data = await fetch("https://cart-karo-backend.vercel.app/");
+    const json = await data.json();
     setListOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -45,7 +46,7 @@ const Body = () => {
   return listOfRestauratn.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body border-2">
+    <div className="body border-2 text-[#02060cbf]">
       <Navbar
         searchText={searchText}
         setSearchText={setSearchText}

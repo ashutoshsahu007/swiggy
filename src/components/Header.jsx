@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
+import { SiSwiggy } from "react-icons/si";
 
 const Header = () => {
   const onlineStatus = useOnlineStatus();
@@ -15,8 +16,10 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between bg-yellow-100 shadow-md py-3 px-2 md:px-10">
+    <div className="flex justify-between shadow-md py-3 px-2 md:px-10">
       <img className="w-20 p-1 rounded-sm" src={LOGO_URL} />
+      <SiSwiggy />
+
       <div className="flex items-center">
         <ul className="flex gap-5 font-semibold items-center">
           <li className=" hidden md:flex">

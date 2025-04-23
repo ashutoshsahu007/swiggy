@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import UserContext from "../utils/UserContext";
+import React from "react";
 
 const Navbar = ({
   searchText,
@@ -7,8 +6,6 @@ const Navbar = ({
   listOfRestauratn,
   setFilteredRestaurant,
 }) => {
-  const { loggedInUser, setUsername } = useContext(UserContext);
-
   return (
     <div className="filter flex flex-col p-2 md:p-0 items-center border-2 border-fuchsia-500 md:flex-row">
       <div className="search m-2 p-4 flex items-center flex-col md:flex-row ">
@@ -45,15 +42,6 @@ const Navbar = ({
         >
           Top Rated Restaurant
         </button>
-      </div>
-      <div className="m-10 hidden lg:block">
-        <label>UserName : </label>
-        <input
-          className="border border-black rounded-md px-2"
-          type="text"
-          value={loggedInUser}
-          onChange={(e) => setUsername(e.target.value)}
-        />
       </div>
     </div>
   );
