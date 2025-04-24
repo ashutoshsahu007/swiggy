@@ -27,16 +27,16 @@ const Header = () => {
           <li className=" hidden md:flex">
             <Link to="/">Home</Link>
           </li>
-          <li className=" hidden lg:flex">
+          {/* <li className=" hidden lg:flex">
             <Link to="/about">About us</Link>
-          </li>
-          <li className="hidden lg:flex">
+          </li> */}
+          {/* <li className="hidden lg:flex">
             <Link to="/grocery">Grocery</Link>
-          </li>
+          </li> */}
           <li className="font-bold text-xl ">
             <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
           </li>
-          <li className="font-bold text-xl hidden lg:flex">{loggedInUser}</li>
+          {/* <li className="font-bold text-xl hidden lg:flex">{loggedInUser}</li> */}
         </ul>
       </div>
     </div>
