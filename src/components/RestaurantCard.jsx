@@ -5,14 +5,13 @@ const RestaurantCard = (props) => {
   const { name, cuisines, avgRatingString, costForTwo } = resData?.info;
 
   return (
-    <div className="m-4 p-4 w-[280px] rounded-lg bg-gray-100 hover:bg-gray-300">
+    <div className="m-4 p-4 w-[280px] rounded-lg">
       <img
-        className="res-logo"
+        className="res-logo rounded-2xl w-[280.92px] h-[186.6px] object-cover"
         src={CDN_URL + props.resData.info.cloudinaryImageId}
-        alt="image not found"
+        alt="image not found "
       />
-      <h3 className="font-bold py-4 text-lg">{name}</h3>
-      <h4>{cuisines.join(" , ")}</h4>
+      <h3 className="font-bold py-4 text-lg h-10 overflow-hidden">{name}</h3>
       <h4 className="flex gap-1">
         <span>
           <svg
@@ -50,8 +49,9 @@ const RestaurantCard = (props) => {
             </defs>
           </svg>
         </span>
-        {avgRatingString} stars
+        {avgRatingString}
       </h4>
+      <h4 className="h-6 overflow-hidden">{cuisines.join(", ")}</h4>
       <h4>{props.resData.info.sla.deliveryTime} minutes</h4>
       <h4>{costForTwo}</h4>
     </div>

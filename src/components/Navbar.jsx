@@ -7,7 +7,7 @@ const Navbar = ({
   setFilteredRestaurant,
 }) => {
   return (
-    <div className="filter flex flex-col p-2 md:p-0 items-center border-2 border-fuchsia-500 md:flex-row">
+    <div className="filter flex flex-col p-2 md:p-0 items-center md:flex-row">
       <div className="search m-2 p-4 flex items-center flex-col md:flex-row ">
         <input
           className="border border-solid border-black rounded-md px-2 py-1 w-[250px]"

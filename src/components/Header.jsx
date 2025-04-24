@@ -16,9 +16,8 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between shadow-md py-3 px-2 md:px-10">
-      <img className="w-20 p-1 rounded-sm" src={LOGO_URL} />
-      <SiSwiggy />
+    <div className="flex justify-between shadow-lg py-3 px-2 md:px-10 sticky top-0 z-20 bg-white">
+      <SiSwiggy className="p-2 bg-[#ff5200] rounded-xl text-white text-5xl" />
 
       <div className="flex items-center">
         <ul className="flex gap-5 font-semibold items-center">

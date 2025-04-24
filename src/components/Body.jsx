@@ -46,7 +46,7 @@ const Body = () => {
   return listOfRestauratn.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body border-2 text-[#02060cbf]">
+    <div className="text-[#02060cbf]">
       <Navbar
         searchText={searchText}
         setSearchText={setSearchText}
@@ -54,7 +54,7 @@ const Body = () => {
         setListOfRestaurant={setListOfRestaurant}
         setFilteredRestaurant={setFilteredRestaurant}
       />
-      <div className="flex flex-wrap border-2 border-red-600">
+      <div className="flex flex-wrap ">
         {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant.info.id}
