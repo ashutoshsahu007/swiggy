@@ -54,7 +54,7 @@ const Body = () => {
         setListOfRestaurant={setListOfRestaurant}
         setFilteredRestaurant={setFilteredRestaurant}
       />
-      <div className="flex flex-wrap ">
+      <div className="flex flex-wrap justify-center p-1">
         {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant.info.id}
@@ -68,7 +68,7 @@ const Body = () => {
           </Link>
         ))}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
