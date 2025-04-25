@@ -22,10 +22,10 @@ const Body = () => {
     // );
 
     // fetch from localhost
-    const data = await fetch("http://localhost:3001/api/swiggy");
+    // const data = await fetch("http://localhost:3001/api/swiggy");
 
     // fetch from vercel
-    // const data = await fetch("https://cart-karo-backend.vercel.app/");
+    const data = await fetch("https://cart-karo-backend.vercel.app/api/swiggy");
     const json = await data.json();
     setListOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
