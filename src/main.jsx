@@ -1,10 +1,9 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Provider } from "react-redux";
@@ -14,16 +13,6 @@ import Cart from "./components/Cart";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
-  const [userName, setUsername] = useState();
-
-  useEffect(() => {
-    // Make an API call and send username and password
-    const data = {
-      name: "Ashutosh sahu",
-    };
-    setUsername(data.name);
-  }, []);
-
   return (
     <Provider store={appStore}>
       <div className="app font-poppins">
@@ -42,11 +31,6 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
-      },
-
-      {
-        path: "/contact",
-        element: <Contact />,
       },
       {
         path: "/grocery",

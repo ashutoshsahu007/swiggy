@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { MENU_API } from "./constants";
 
 const useRestaurantMenu = (resId) => {
   const [resInfo, setRestInfo] = useState(null);
@@ -17,9 +16,6 @@ const useRestaurantMenu = (resId) => {
       `https://cart-karo-backend.vercel.app/menu?restaurantId=${resId}`
     );
 
-    // const data = await fetch(
-    //   "https://cart-karo-backend.vercel.app/menu?restaurantId=12345"
-    // );
     const json = await data.json();
     setRestInfo(json.data);
   };
