@@ -8,7 +8,11 @@ const useRestaurantMenu = (resId) => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(MENU_API + resId);
+    // const data = await fetch(MENU_API + resId);
+    // const data = await fetch("http://localhost:3001/menu");
+    const data = await fetch(
+      `http://localhost:3001/menu?restaurantId=${resId}`
+    );
     const json = await data.json();
     setRestInfo(json.data);
   };

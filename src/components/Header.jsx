@@ -1,15 +1,10 @@
-import { useContext } from "react";
-import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import { SiSwiggy } from "react-icons/si";
 
 const Header = () => {
   const onlineStatus = useOnlineStatus();
-
-  const { loggedInUser } = useContext(UserContext);
 
   // Subscribing to the store using a selector
 
@@ -27,9 +22,6 @@ const Header = () => {
           <li className=" hidden md:flex">
             <Link to="/">Home</Link>
           </li>
-          {/* <li className=" hidden lg:flex">
-            <Link to="/about">About us</Link>
-          </li> */}
           {/* <li className="hidden lg:flex">
             <Link to="/grocery">Grocery</Link>
           </li> */}

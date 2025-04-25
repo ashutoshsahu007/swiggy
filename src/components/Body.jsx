@@ -3,7 +3,6 @@ import Shimmer from "./Shimmer";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Body = () => {
@@ -17,13 +16,16 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
+    // direct fetch
     // const data = await fetch(
     //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     // );
 
-    // const data = await fetch("http://localhost:3001/api/swiggy");
+    // fetch from localhost
+    const data = await fetch("http://localhost:3001/api/swiggy");
 
-    const data = await fetch("https://cart-karo-backend.vercel.app/");
+    // fetch from vercel
+    // const data = await fetch("https://cart-karo-backend.vercel.app/");
     const json = await data.json();
     setListOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
