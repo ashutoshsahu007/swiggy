@@ -13,9 +13,9 @@ const ItemList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.card.info.id}
-          className="p-2 m-2 border-x-gray-200 border-b-4 text-left flex justify-between"
+          className="p-4 m-2  border-x-gray-200 border-b-4 text-left  flex justify-between"
         >
-          <div className="w-9/12">
+          <div className="w-8/12">
             <div className="py-2">
               <span className="font-semibold text-gray-900">
                 {item.card.info.name}
@@ -28,19 +28,17 @@ const ItemList = ({ items }) => {
               {item.card.info.description}
             </p>
           </div>
-          <div className="w-3/12 p-4">
-            <div className="absolute">
-              <button
-                className="p-2 mx-16 rounded-lg bg-green-500 font-[450] text-black shadow-lg"
-                onClick={() => handleAddItem(item)}
-              >
-                Add +
-              </button>
-            </div>
+          <div className="w-4/12 h-fit border-2 border-black relative ">
             <img
               src={CDN_URL + item.card.info.imageId}
-              className="w-full rounded-lg"
+              className=" rounded-lg object-cover h-[100px] w-[100px]"
             />
+            <button
+              className="p-2 absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rounded-lg bg-green-500 font-[450] text-gray-800"
+              onClick={() => handleAddItem(item)}
+            >
+              Add +
+            </button>
           </div>
         </div>
       ))}

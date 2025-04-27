@@ -8,7 +8,7 @@ const RestaurantCategory = ({ data, showItems, setOpenIndex }) => {
   return (
     <div className="w-[90%] md:w-6/12 mx-auto my-6 bg-gray-50 shadow-lg p-4">
       <div
-        className="flex justify-between  items-center cursor-pointer"
+        className="flex justify-between cursor-pointer"
         onClick={handleClicked}
       >
         <span className="font-bold text-lg">
