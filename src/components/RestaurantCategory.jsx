@@ -1,8 +1,10 @@
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data, showItems, setShowIndex, dummy }) => {
+const RestaurantCategory = ({ data, showItems, setOpenIndex }) => {
   const handleClicked = () => {
-    setShowIndex();
+    //if the clicked index is already open, close it
+    // else open the clicked index and close the rest
+    setOpenIndex();
   };
 
   return (
