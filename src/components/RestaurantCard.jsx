@@ -5,9 +5,9 @@ const RestaurantCard = (props) => {
   const { name, cuisines, avgRatingString, costForTwo } = resData?.info;
 
   return (
-    <div className="m-4 p-4 w-[300px] sm:w-[350px] rounded-lg hover:scale-105 transition-all duration-200 ease-in-out">
+    <div className="m-4 p-4 w-[300px] rounded-lg hover:scale-105 transition-all duration-200 ease-in-out">
       <img
-        className="res-logo rounded-2xl w-[300px] sm:w-[350px] sm:h-[250px] h-[220px] object-cover"
+        className="res-logo rounded-2xl w-[300px] h-[200px] object-cover"
         src={CDN_URL + props.resData.info.cloudinaryImageId}
         alt="image not found"
       />
