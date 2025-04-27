@@ -13,7 +13,7 @@ const ItemList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.card.info.id}
-          className="p-4 m-2  border-x-gray-200 border-b-4 text-left  flex justify-between"
+          className="p-1 md:p-4 m-2  border-x-gray-200 border-b-4 text-left  flex justify-between"
         >
           <div className="w-8/12">
             <div className="py-2">
@@ -31,10 +31,10 @@ const ItemList = ({ items }) => {
           <div className="w-[150px] h-fit border-2 border-black relative ">
             <img
               src={CDN_URL + item.card.info.imageId}
-              className=" rounded-lg object-cover  w-[100px] md:w-[150px]"
+              className=" rounded-lg object-cover  w-full md:w-[150px]"
             />
             <button
-              className="p-2 absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rounded-lg bg-green-500 font-[450] text-gray-800"
+              className="p-2 absolute bottom-[-10px]  left-1/2 transform -translate-x-1/2 rounded-lg bg-green-500 font-[450] text-gray-800 text-xs md:text-sm"
               onClick={() => handleAddItem(item)}
             >
               Add +
