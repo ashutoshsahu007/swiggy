@@ -28,7 +28,7 @@ const ItemList = ({ items }) => {
               {item.card.info.description}
             </p>
           </div>
-          <div className="w-[150px] h-fit border-2 border-black relative ">
+          <div className="w-[150px] h-fit relative ">
             <img
               src={CDN_URL + item.card.info.imageId}
               className=" rounded-lg object-cover  w-full md:w-[150px]"
