@@ -17,21 +17,30 @@ const ItemList = ({ items }) => {
         >
           <div className="w-9/12">
             <div className="py-2">
-              <span className="">{item.card.info.name}</span>
-              <span>- Rs. {item.card.info.price / 100}</span>
+              <span className="font-semibold text-gray-900">
+                {item.card.info.name}
+              </span>
+              <span className="font-semibold text-gray-900">
+                - Rs. {item.card.info.price / 100}
+              </span>
             </div>
-            <p className="text-xs">{item.card.info.description}</p>
+            <p className="text-sm font-[400]  text-[#676a6d] capitalize">
+              {item.card.info.description}
+            </p>
           </div>
           <div className="w-3/12 p-4">
             <div className="absolute">
               <button
-                className="p-2 mx-16 rounded-lg bg-green-500 text-black shadow-lg"
+                className="p-2 mx-16 rounded-lg bg-green-500 font-[450] text-black shadow-lg"
                 onClick={() => handleAddItem(item)}
               >
                 Add +
               </button>
             </div>
-            <img src={CDN_URL + item.card.info.imageId} className="w-full" />
+            <img
+              src={CDN_URL + item.card.info.imageId}
+              className="w-full rounded-lg"
+            />
           </div>
         </div>
       ))}

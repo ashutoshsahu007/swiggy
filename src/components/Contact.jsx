@@ -10,7 +10,6 @@ const Contact = () => {
       </h1>
     );
   }
-
   return (
     <div>
       <h1>Contact us on linked in </h1>
