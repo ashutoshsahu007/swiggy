@@ -28,10 +28,10 @@ const ItemList = ({ items }) => {
               {item.card.info.description}
             </p>
           </div>
-          <div className="w-4/12 h-fit border-2 border-black relative ">
+          <div className="w-[150px] h-fit border-2 border-black relative ">
             <img
               src={CDN_URL + item.card.info.imageId}
-              className=" rounded-lg object-cover h-[100px] w-[100px]"
+              className=" rounded-lg object-cover  w-[100px] md:w-[150px]"
             />
             <button
               className="p-2 absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rounded-lg bg-green-500 font-[450] text-gray-800"
