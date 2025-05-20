@@ -16,16 +16,16 @@ const Header = () => {
 
       <div className="flex items-center text-gray-700">
         <ul className="flex gap-5 font-semibold items-center">
-          <li className=" hidden md:flex">
+          <li className="hidden md:flex">
             Online Status : {onlineStatus ? "✅" : "🔴"}
           </li>
-          <li className=" hidden md:flex">
+          <li className="hidden md:flex">
             <Link to="/">Home</Link>
           </li>
-          {/* <li className="hidden lg:flex">
+          {/* <li>
             <Link to="/grocery">Grocery</Link>
           </li> */}
-          <li className="font-bold text-xl ">
+          <li className="font-bold text-xl">
             <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
           </li>
         </ul>

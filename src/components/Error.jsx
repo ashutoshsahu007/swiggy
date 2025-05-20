@@ -1,5 +1,4 @@
-import { useRouteError } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useRouteError, useNavigate } from "react-router-dom";
 
 const Error = () => {
   const err = useRouteError();

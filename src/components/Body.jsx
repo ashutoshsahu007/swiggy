@@ -17,7 +17,9 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch("https://cart-karo-backend.vercel.app/api/swiggy");
+
     const json = await data.json();
+
     setListOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -30,7 +32,7 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) {
     return (
-      <h1>
+      <h1 className="text-2xl font-bold p-5">
         Looks like you're offline !! Please Check Your Internet Connection
       </h1>
     );
@@ -61,7 +63,6 @@ const Body = () => {
           </Link>
         ))}
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
