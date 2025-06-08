@@ -22,9 +22,9 @@ const Header = () => {
           <li className="hidden md:flex">
             <Link to="/">Home</Link>
           </li>
-          {/* <li>
+          <li>
             <Link to="/grocery">Grocery</Link>
-          </li> */}
+          </li>
           <li className="font-bold text-xl">
             <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
           </li>
