@@ -11,3 +11,5 @@
 - Installed Babel dependencies
 - Configure Babel
 - Configurre Parcel config file to disabked default babel transifile
+- jest Configuration -- npx jest --init
+  -Install jsdsdom library
